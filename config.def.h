@@ -79,8 +79,8 @@ ResourcePref resources[] = {
 		{ "color8",             STRING,  &normbgcolor },
 		{ "color7",             STRING,  &normbordercolor },
 		{ "color15",            STRING,  &normfgcolor },
-		{ "color5",             STRING,  &selbgcolor },
-		{ "color5",             STRING,  &selbordercolor },
+		{ "color1",             STRING,  &selbgcolor },
+		{ "color1",             STRING,  &selbordercolor },
 		{ "color15",            STRING,  &selfgcolor },
 		{ "borderpx",          	INTEGER, &borderpx },
 		{ "snap",          		INTEGER, &snap },
@@ -137,7 +137,7 @@ STACKKEYS(MODKEY|ShiftMask,                                push)
 	{ 0,                    XF86XK_MonBrightnessDown,  spawn,          SHCMD("xbacklight -dec 10") },
 	{ 0,                    XF86XK_AudioRaiseVolume,   spawn,          SHCMD("pactl set-sink-volume 0 +5%") },
 	{ 0,                    XF86XK_AudioLowerVolume,   spawn,          SHCMD("pactl set-sink-volume 0 -5%") },
-	{ 0,                    XF86XK_AudioMute,          spawn,          SHCMD("pactl set-sink-mute 0") },
+	{ 0,                    XF86XK_AudioMute,          spawn,          SHCMD("pactl set-sink-mute 0 toggle") },
 };
 
 /* button definitions */
