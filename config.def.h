@@ -134,9 +134,9 @@ STACKKEYS(MODKEY|ShiftMask,                                push)
 	{ 0,                    XK_Print,                  spawn,          SHCMD("flameshot gui") },
 	{ 0,                    XF86XK_MonBrightnessUp,    spawn,          SHCMD("xbacklight -inc 10") },
 	{ 0,                    XF86XK_MonBrightnessDown,  spawn,          SHCMD("xbacklight -dec 10") },
-	{ 0,                    XF86XK_AudioRaiseVolume,   spawn,          SHCMD("pactl set-sink-volume 0 +5%") },
-	{ 0,                    XF86XK_AudioLowerVolume,   spawn,          SHCMD("pactl set-sink-volume 0 -5%") },
-	{ 0,                    XF86XK_AudioMute,          spawn,          SHCMD("pactl set-sink-mute 0 toggle") },
+	{ 0,                    XF86XK_AudioRaiseVolume,   spawn,          SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%") },
+	{ 0,                    XF86XK_AudioLowerVolume,   spawn,          SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%") },
+	{ 0,                    XF86XK_AudioMute,          spawn,          SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle") },
 };
 
 /* button definitions */
